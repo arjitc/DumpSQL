@@ -5,10 +5,10 @@ database_password=""
 
 # Define a timestamp function
 timestamp() {
-  date +"%T"
+  date +"%T-%m-%d-%Y"
 }
 
 # lets dump the DB now
-mysqldump -u $database_user -p $database_password $database_name > $(timestamp).sql
+mysqldump -u $database_user -p$database_password $database_name > $(timestamp).sql
 
 echo "Done!"
