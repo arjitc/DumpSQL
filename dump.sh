@@ -22,4 +22,8 @@ mysqldump -u $database_user -p$database_password $database_name > $filename.sql
 
 # lets scp this!
 scp $remote_filename $remote_host_username:'$remote_host_password'@$remote_host:/root
+
+#lets delete the local backup file which we created above
+rm -f $filename.sql
+
 echo "Done!"
