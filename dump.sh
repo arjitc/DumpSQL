@@ -21,5 +21,5 @@ remote_filename=$filename.sql
 mysqldump -u $database_user -p$database_password $database_name > $filename.sql
 
 # lets scp this!
-scp $remote_filename $remote_host_username@$remote_host:/root
+scp $remote_filename $remote_host_username:'$remote_host_password'@$remote_host:/root
 echo "Done!"
