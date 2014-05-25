@@ -1,4 +1,4 @@
-#!/bin/bash   
+#!/bin/bash
 
 #dont forget to set these below or else this script will not work
 database_name=""
@@ -9,10 +9,11 @@ database_password=""
 remote_host=""
 remote_host_username=""
 remote_host_password=""
+ssh_port=""
 
 # Define a timestamp function
 timestamp() {
-  date +"%T-%m-%d-%Y"
+  date +%s
 }
 
 # lets dump the DB now
@@ -21,9 +22,9 @@ remote_filename=$filename.sql
 mysqldump -u $database_user -p$database_password $database_name > $filename.sql
 
 # lets scp this!
-scp $remote_filename $remote_host_username:'$remote_host_password'@$remote_host:/root
+sshpass -p "$remote_host_password" scp -P $ssh_port $remote_filename $remote_host_username@$remote_host:/root
 
 #lets delete the local backup file which we created above
-rm -f $filename.sql
+rm -f $remote_filename
 
 echo "Done!"
