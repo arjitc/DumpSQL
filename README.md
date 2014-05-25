@@ -15,4 +15,5 @@ Edit dump.sh and set the mysql user, mysql DB and mysql password and then set th
 Requirements:
 SSHPass
 > On CentOS : yum install sshpass
+
 > On Debian/Ubuntu : apt-get install sshpass
