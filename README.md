@@ -20,7 +20,7 @@ SSHPass
 
 #### Debugging:
 If the database isnt getting SCP'd to the remote server you have set, then do this,
-> scp <any_file_here> <user>@<remote host>
+> scp any_file_here remote_user@remote_host
 
 You'll then get someting like
 > The authenticity of host 'xx.xxxx.xxx (xxx.xxx.xxx.xxx)' can't be established.
