@@ -24,13 +24,9 @@ If the database isnt getting SCP'd to the remote server you have set, then do th
 
 You'll then get someting like
 > The authenticity of host 'xx.xxxx.xxx (xxx.xxx.xxx.xxx)' can't be established.
-
 > RSA key fingerprint is xxxxxxxxxxxxx.
-
 > Are you sure you want to continue connecting (yes/no)? yes
-
 > Warning: Permanently added 'xx.xxxx.xxx,xxx.xxx.xxx.xxx' (RSA) to the list of known hosts.
-
 >root@xxx.xxx.xxx.xxx's password:
 
 Now, just exit it by hitting CTRL + C and then try sh dump.sh agian.
